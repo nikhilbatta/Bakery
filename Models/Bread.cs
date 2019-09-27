@@ -5,7 +5,7 @@ namespace Bakery
 {
     public class Bread
     {
-        public double Price{get;set;}
+        public int Price{get;set;}
         public int Amount{get;set;}
         
 
@@ -25,14 +25,7 @@ namespace Bakery
         }
         private void AdjustPrice(int breadNumber)
         {
-            if(breadNumber == 1)
-            {
-                Price = breadNumber * 5;
-            }
-            else if(breadNumber >= 2)
-            {
-                Price = (breadNumber / 2) * 5;
-            }
+            // need to catch 2,5,8,11 for the free ones. 
         }
     }
     
