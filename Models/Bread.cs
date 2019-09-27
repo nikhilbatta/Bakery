@@ -26,7 +26,7 @@ namespace Bakery
         private void AdjustPrice(int breadNumber)
         {
             // need to catch 2,5,8,11 for the free ones. 
-            Price = ((breadNumber / 3) * 5) + ((breadNumber % 3) * 5);
+            Price = ((breadNumber / 3) * 10) + ((breadNumber % 3) * 5);
         }
     }
     
