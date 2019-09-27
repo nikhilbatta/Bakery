@@ -7,12 +7,17 @@ namespace Bakery
     {
         public int Price{get;set;}
         public int Amount{get;set;}
+        private static List<Bread> _Breads = new List<Bread> {};
         
-
         public Bread()
         {
             Price = 0;
             Amount = 0;
+            _Breads.Add(this);
+        }
+        public static List<Bread> GetAllBread()
+        {
+        return _Breads;
         }
         public void OrderForBread(int breadNumber)
         {
