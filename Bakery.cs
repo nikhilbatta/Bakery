@@ -16,15 +16,15 @@ namespace Bakery
         {
             Console.WriteLine("Welcome to my Bakery please enter in how many pastries you would like to purchase today?");
             int aNumber = int.Parse(Console.ReadLine());
-            Pastry pastry1 = new Pastry();
-            pastry1.OrderForPastry(aNumber);
+            Pastry pastry1 = new Pastry(aNumber);
+            pastry1.CalculatePastryPrice();
             Console.WriteLine(pastry1.Price);
 
-            
+
             Console.WriteLine("Enter in how many loafs of bread");
             int anotherNumber = int.Parse(Console.ReadLine());
-            Bread bread = new Bread();
-            bread.OrderForBread(anotherNumber);
+            Bread bread = new Bread(anotherNumber);
+            bread.CalculateBreadPrice();
             Console.WriteLine(bread.Price);
             
             
@@ -36,20 +36,17 @@ namespace Bakery
                 StartBakery();
             }
             else {
-                // show total price 
+            //     // show total price 
                 Program.GetList();
             }
         }
         public static void GetList()
         {
-            List<Bread> breadResult = Bread.GetAllBread();
-            List<Pastry> result = Pastry.GetAll();
-            foreach(Pastry thisPastry in result)
+            List<BakeryItem> bakeryResult = BakeryItem.GetAll();
+            
+            foreach(BakeryItem item in bakeryResult)
             {
-                foreach(Bread thisBread in breadResult)
-                {
-                    Console.WriteLine(thisPastry.Price + thisBread.Price);
-                }
+               Console.WriteLine(item);
             }
         }
     }

@@ -6,29 +6,33 @@ namespace Bakery
     public class BakeryItem
     {
         public int Amount;
-        public int Price;
+        public double Price;
+        public static List<BakeryItem> _instances = new List<BakeryItem> {};
     
-    public void Print()
-    {
-        Console.WriteLine(Amount);
+    public static List<BakeryItem> GetAll()
+     {
+        return _instances;
     }
+
     }
     class Pastry : BakeryItem
     {
         public Pastry(int pastryAmount)
         {
             Amount = pastryAmount;
+            
             CalculatePastryPrice();
+            _instances.Add(this);
         }
         public void CalculatePastryPrice()
         {
             if(Amount <= 2)
         {
-            Price = aNumber * 2;
+            Price = Amount * 2;
         }
             else if(Amount >= 3)
         {
-            Price = aNumber * 1.67;
+            Price = Amount * 1.67;
         }
         }
     }
@@ -38,10 +42,11 @@ namespace Bakery
         {
             Amount = breadAmount;
             CalculateBreadPrice();
+            _instances.Add(this);
         }
         public void CalculateBreadPrice()
         {
-            Price = ((breadNumber / 3) * 10) + ((breadNumber % 3) * 5);
+            Price = ((Amount / 3) * 10) + ((Amount % 3) * 5);
         }
     }
 }
