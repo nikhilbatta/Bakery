@@ -5,7 +5,7 @@ namespace Bakery
 {
     public class Pastry
     {
-        public int Price;
+        public double Price;
         public int Amount;
     
     public Pastry()
@@ -24,7 +24,14 @@ namespace Bakery
     }
     private void AdjustPrice(int aNumber)
     {
-        Price = aNumber * 2;
+        if(aNumber >= 2){
+            Price = aNumber * 2;
+        }
+        else if(aNumber >= 3)
+        {
+            Price = aNumber * 1.67;
+        }
+        
     }
     }
 }
