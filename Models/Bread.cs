@@ -25,15 +25,14 @@ namespace Bakery
         }
         private void AdjustPrice(int breadNumber)
         {
-            
-            // if(breadNumber == 1)
-            // {
-            //     Price = breadNumber * 5;
-            // }
-            // else if(breadNumber >= 2)
-            // {
-            //     Price = ((((breadNumber + 1) * 2) / 3) * 5);
-            // }
+            if(breadNumber == 1)
+            {
+                Price = breadNumber * 5;
+            }
+            else if(breadNumber >= 2)
+            {
+                Price = (breadNumber / 2) * 5;
+            }
         }
     }
     
