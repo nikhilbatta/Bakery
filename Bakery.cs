@@ -20,7 +20,15 @@ namespace Bakery
             Console.WriteLine(bread.Price);
             double totalPrice = bread.Price + pastry1.Price; 
             Console.WriteLine("Your total price is: " + totalPrice);
-            Console.WriteLine(Pastry.GetAll());
+            GetList();
+        }
+        public static void GetList()
+        {
+            List<Pastry> result = Pastry.GetAll();
+            foreach(Pastry thisPastry in result)
+            {
+                Console.WriteLine(thisPastry);
+            }
         }
 
     }
