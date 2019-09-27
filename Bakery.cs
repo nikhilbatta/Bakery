@@ -43,11 +43,12 @@ namespace Bakery
         public static void GetList()
         {
             List<BakeryItem> bakeryResult = BakeryItem.GetAll();
-            
+            double bakeryTotalPrice = 0;
             foreach(BakeryItem item in bakeryResult)
             {
-               Console.WriteLine(item);
+               bakeryTotalPrice += item.Price;
             }
+            Console.WriteLine("Your total price is " + bakeryTotalPrice);
         }
     }
 }
