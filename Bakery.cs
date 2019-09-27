@@ -7,10 +7,7 @@ namespace Bakery
     {
         public static void Main()
         {
-            
             StartBakery();
-
-            
         }
         public static void StartBakery()
         {
@@ -38,6 +35,7 @@ namespace Bakery
             else {
             //     // show total price 
                 Program.GetList();
+                System.Environment.Exit(2);
             }
         }
         public static void GetList()
