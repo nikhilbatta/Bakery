@@ -24,7 +24,7 @@ namespace Bakery
     }
     private void AdjustPrice(int aNumber)
     {
-        if(aNumber >= 2){
+        if(aNumber <= 2){
             Price = aNumber * 2;
         }
         else if(aNumber >= 3)
