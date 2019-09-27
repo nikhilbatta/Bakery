@@ -12,6 +12,12 @@ namespace Bakery
             Pastry pastry = new Pastry();
             pastry.OrderForPastry(aNumber);
             Console.WriteLine(pastry.Price);
+
+            Console.WriteLine("Enter in how many loafs of bread");
+            int anotherNumber = int.Parse(Console.ReadLine());
+            Bread bread = new Bread();
+            bread.OrderForBread(anotherNumber);
+            Console.WriteLine(bread.Price);
         }
 
     }

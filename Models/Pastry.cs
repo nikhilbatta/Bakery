@@ -5,8 +5,8 @@ namespace Bakery
 {
     public class Pastry
     {
-        public double Price;
-        public int Amount;
+        public double Price{get;set;}
+        public int Amount{get;set;}
     
     public Pastry()
     {
