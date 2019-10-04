@@ -5,9 +5,9 @@ namespace Bakery
 {
     public class BakeryItem
     {
-        public int Amount;
-        public double Price;
-        public static List<BakeryItem> _instances = new List<BakeryItem> {};
+        public int Amount{get;set;}
+        public double Price{get;set;}
+        private static List<BakeryItem> _instances = new List<BakeryItem>{};
     
     public static List<BakeryItem> GetAll()
      {
